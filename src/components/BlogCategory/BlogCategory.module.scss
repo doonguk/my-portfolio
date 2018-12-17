@@ -1,0 +1,98 @@
+@import '~styles/utils';
+//:last-child : 마지막 자식 선택자
+.category-template{
+    font-family : "Noto Sans KR", sans-serif;
+    margin-bottom : 10vh;
+    .recent-post{
+        .recent-post-title{
+            display : flex;
+            align-items : center;
+            font-size : 1.5rem;
+            span{
+                margin-left : 0.7rem;
+                color : $oc-violet-5;
+            }
+        }
+        .recent-contents{
+            margin-top : 30px;
+            ul{
+                padding-left : 0.2rem;
+            }
+            li{
+                list-style : none;
+                display : flex;
+                cursor : pointer;
+                font-weight : 300;
+                .contents-name{
+                    text-decoration: none;
+                    display : flex;
+                    font-size : 1.2rem;
+                    color : black;
+                }
+                .publishedDate{
+                    font-size : 0.9rem;
+                    color : $oc-gray-6;
+                    margin-left : 0.8rem;
+                    margin-top : 0.3rem;
+                }
+                &:hover{
+                    margin-left : -1rem;
+                    transition : 0.15s;
+                }
+            }
+            li:before{
+                content : '○';
+                font-size : 0.5rem;
+                vertical-align: middle;
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                padding-right : 0.5rem;
+            }
+        }
+    }
+    .category-post{
+        margin-top : 30px;
+        .title{
+            font-size : 1.5rem;
+            color : $oc-blue-5;
+        }
+        .category-contents{
+            margin-top : 30px;
+            ul{
+                padding-left : 0.2rem;
+            }
+            li{
+                list-style : none;
+                display : flex;
+                cursor : pointer;
+                font-weight : 300;
+                .contents-name{
+                    text-decoration: none;
+                    display : flex;
+                    font-size : 1.2rem;
+                    color : black;
+                }
+                .publishedDate{
+                    font-size : 0.9rem;
+                    color : $oc-gray-6;
+                    margin-left : 0.8rem;
+                    margin-top : 0.3rem;
+                }
+                &:hover{
+                    margin-left : -1rem;
+                    transition : 0.15s;
+                }
+            }
+            li:before{
+                content : '○';
+                font-size : 0.5rem;
+                vertical-align: middle;
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                padding-right : 0.5rem;
+            }
+        }
+    }
+}

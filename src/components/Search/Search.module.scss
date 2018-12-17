@@ -1,0 +1,122 @@
+@import '~styles/utils';
+
+.search-template{
+    background : $oc-gray-4;
+    width : 100%;
+    margin : 0 auto;
+    height : 21rem;
+    .search-box{
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        flex-direction: column;
+        width : 100%;
+        .title{
+            margin-top : 40px;
+            font-weight : 500;
+            font-size : 2.2rem;
+            font-family: 'Noto Sans KR';
+            @include media("<middle"){
+                font-size : 2rem;
+            }
+            @include media("<350px"){
+                font-size : 1.8rem;
+            }
+        }
+        .example{
+            margin-top : 15px;
+            color : $oc-cyan-5;
+            font-weight : 500;
+            font-size : 1.2rem;
+            @include media("<middle"){
+                font-size : 1rem;
+            }
+            @include media("<350px"){
+                font-size : 0.9rem
+            }
+            .tag{
+                text-decoration: none;
+                color : $oc-cyan-5;
+                border : 1px solid $oc-cyan-5;
+                border-radius : 15px;
+                padding : 0.3rem 0.5rem 0.3rem 0.5rem;
+                &:hover{
+                    border : 2px solid $oc-gray-7;
+                    color : $oc-gray-7;
+                }
+            }
+            .tag + .tag {
+                margin-left : 1.5rem;
+            }
+        }
+        .input-div{
+            margin-top : 40px;
+            display :flex;
+            flex-direction: row;
+            border : 3px solid $oc-cyan-5;
+            border-radius: 7px;
+            width : 50%;
+            @include media("<large"){
+                width : 70%;
+            }
+            @include media("<620px"){
+                width : 80%;
+            }
+            @include media("<middle"){
+                width : 90%;
+            }
+            input{
+                border : none;
+                flex : 1;
+                height : 80px;
+                font-size : 2.2rem;
+                padding-left : 20px;
+                width : 85%;
+                @include media("<middle"){
+                    height : 70px;
+                    width : 80%;
+                    padding-left : 10px;
+                }
+                @include media("<350px"){
+                    padding-left : 0;
+                }
+                
+                &::placeholder{
+                    text-align : center;
+                    @include media("<large"){
+                        font-size : 2rem;
+                    }
+                    @include media("<470px"){
+                        font-size : 1.7rem;
+                    }
+                    @include media("<400px"){
+                        font-size : 1.5rem;
+                    }
+                    @include media("<350px"){
+                        font-size : 1.3rem;
+                    }
+                }
+            }
+            .btn{
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                width : 15%;
+                border-left : 3px solid $oc-cyan-5;
+                cursor : pointer;
+                @include media("<middle"){
+                    width : 20%;
+                }
+            }
+        }
+        .description{
+            margin-top : 20px;
+            font-size : 0.9rem;
+            color : $oc-gray-7;
+            cursor : pointer;
+            &:hover{
+                font-weight : 600;
+            }
+        }
+    }
+}

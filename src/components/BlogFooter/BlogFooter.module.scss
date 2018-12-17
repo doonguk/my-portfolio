@@ -1,0 +1,43 @@
+@import '~styles/utils';
+
+
+.blog-footer{
+    display : flex;
+    width : 50%;
+    margin-left : 25%;
+    margin-top : 3rem;
+    justify-content: center;
+    font-size : 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom : 10vh;
+    div{
+        background : $oc-violet-4;
+        color : white;
+        cursor : pointer;
+        padding : 0.3rem 1rem 0.3rem 1rem;
+        width : 6rem;
+        text-align : center;
+        border-radius : 3px;
+        @include material-shadow(3, 0.5);
+        &:hover{
+            background : $oc-violet-5;
+        }
+    }
+    .pre-btn{
+        min-width: 100px;
+        &.isDisable1{
+            background : $oc-gray-7;
+            cursor : unset;
+        }
+    }
+    .next-btn{
+        min-width : 100px;
+        &.isDisable2{
+            background : $oc-gray-7;
+            cursor : unset;
+        }
+    }
+    div + div {
+        margin-left : 5rem;
+    }
+}

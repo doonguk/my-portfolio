@@ -1,0 +1,100 @@
+@import '~styles/utils';
+
+.search-template{
+    font-family: 'Noto Sans KR';
+    h1{
+        font-weight : 400; 
+        @include media('<medium'){
+            margin-left : 2%;
+        }
+    }
+    .description{
+        margin-top : 3%;
+        margin-left : 2%;
+        font-size : 1.2rem;
+        @include media('<medium'){
+           font-size : 1rem;
+           margin-top : 5%;
+           line-height : 1.7rem;
+        }
+    }
+    .input-box{
+        margin-left : 2%;
+        margin-top : 3%;
+        display : flex;
+        @include media('<medium'){
+            margin-top : 6%;
+        }
+        input{
+            outline : none;
+            border : none;
+            height : 70px;
+            width :60%;
+            font-size : 2rem;
+            padding : 0.2rem 0.5rem 0.2rem 0.5rem;
+            border-left : 3px solid $oc-gray-5;
+            border-top : 3px solid $oc-gray-5;
+            border-bottom : 3px solid $oc-gray-5;
+            @include media('<medium'){
+                width : 80%;
+            }
+        }
+        .search-btn{
+            cursor : pointer;
+            height : 70px;
+            width : 70px;
+            border : 3px solid $oc-gray-5;
+            display : flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .search-list{
+        margin-top : 80px;
+        margin-bottom : 80px;
+        .search-post{
+            @include material-shadow(2,0.6);
+            font-family : 'Noto Sans KR';
+            cursor : pointer;
+            padding-left : 0.6rem;
+            padding-right : 0.6rem;
+            &:hover{
+                @include material-shadow(2, 1);
+            }
+            h1{
+                font-size : 1.7rem;
+                padding : 0.5rem 0 0.2rem 0;
+                color : $oc-violet-5;
+                @include media('<400px'){
+                    font-size : 1.5rem;
+                    margin-left : -0.2rem;
+                }
+            }
+            .description{
+                .date{
+                    margin-right : 10px;
+                    @include media('<400px'){
+                        display : block;
+                    }
+                }
+                .tag{
+                    color : $oc-blue-5;
+                }
+                .tag + .tag{
+                    margin-left : 0.5rem;
+                }
+            }
+            .body{
+                margin-left : 1rem;
+                padding-top : 5px;
+                padding-bottom : 1rem;
+                @include media('<500px'){
+                    margin-left : 0.5rem;
+                }
+            }
+        }
+        .search-post + .search-post{
+            margin-top : 2rem;
+        }
+    }
+}

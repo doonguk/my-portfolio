@@ -1,0 +1,71 @@
+@import '~styles/utils';
+
+@keyframes fadeIn{
+    0%{ opacity : 0;}
+    100%{ opacity: 1;}
+}
+@keyframes fadeOut{
+    0%{ opacity : 1;}
+    100%{ opacity: 0;}
+}
+@-webkit-keyframes fadeIn{
+    0%{ opacity : 0;}
+    100%{ opacity: 1;}
+}
+@-webkit-keyframes fadeOut{
+    0%{ opacity : 1;}
+    100%{ opacity: 0;}
+}
+
+@mixin place-at-center(){
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-photo{
+    @include place-at-center();
+    margin-top : 5.8rem;
+    flex-direction: column;
+    width : 60%;
+    margin-left : 20%;
+    margin-right : 20%;
+    @include media("<large"){
+        width : 80%;
+        margin-left : 10%;
+        margin-right : 10%;
+    }
+    .photo-box{
+        @include place-at-center();
+        width : 100%;
+        height : 100%;
+         img{
+            opacity:1;
+            border-radius: 50%;
+            width : 500px;
+            height : 100%;
+            animation : fadeIn 0.5s ease-in;
+            -webkit-animation: fadeIn 0.5s ease-in;
+            -o-animation: fadeIn 0.5s ease-in;
+            -ms-animation : fadeIn 0.5s ease-in;
+            @include media("<wide"){
+                width : 80%;
+            }
+            @include media("<medium"){  
+                width : 80%;
+                height : 80%;
+            }
+        }
+    }
+    .photo-btn{
+        @include place-at-center();
+        flex-direction: row;
+        font-size : 2.2rem;
+        padding-top : 0.5rem;
+        width : 100%;
+        cursor : pointer;
+        div + div {
+            margin-left : 0.7rem;
+        }
+    }
+}

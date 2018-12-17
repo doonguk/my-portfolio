@@ -1,0 +1,50 @@
+@import '~styles/utils';
+
+@keyframes fadeIn{
+    0%{opacity : 0;}
+    100%{opacity :1;}
+}
+@keyframes fadeOut{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+@keyframes slideUp{
+    0%{ transform : translateY(50vh);} //중앙에서 50vh 만큼 y 이동
+    100%{ transform : translateY(0);}
+}
+@keyframes slideDown{
+    0%{ transform : translateY(0);}
+    100%{ transform : translateY(50vh);}
+}
+.gray-background{
+    position : fixed;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right :0;
+    background : rgba(100,100,100,0.5);
+    z-index : 5;
+    &.enter{
+        animation : fadeIn 0.25s ease-in both;
+    }
+    &.leave{
+        animation : fadeOut 0.25s ease-in both;
+    }
+}
+.modal-wrapper{
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    z-index : 10;
+    transform : translate(-50%,-50%);
+    .modal{
+        background : white;
+        @include material-shadow(3, 0.5);
+        &.enter{
+            animation : slideUp 0.25s ease-in both;
+        }
+        &.leave{
+            animation : slideDown 0.25s ease-in both;
+        }
+    }
+}

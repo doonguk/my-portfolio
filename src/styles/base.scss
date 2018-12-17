@@ -1,0 +1,22 @@
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("//cdn.jsdelivr.net/gh/velopert/font-d2coding@1.2.1/d2coding.css");
+
+body{
+    box-sizing: border-box;
+    margin : 0;
+    -webkit-font-smoorhing : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family : "Noto Sans KR", sans-serif;
+    // padding-top : 3.8rem;
+}
+
+*{
+    box-sizing : inherit;
+}
+
+a{
+    text-decoration: inherit;
+    color : inherit;
+}

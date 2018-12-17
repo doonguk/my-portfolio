@@ -1,0 +1,144 @@
+@import '~styles/utils';
+
+.last-update{
+    margin-top : 2rem;
+    display : flex;
+    // justify-content: center;
+    // align-items: center;
+    margin : 0 auto;
+    flex-direction: column;
+    width : 100%;
+    padding-left: 20%;
+    padding-right : 20%;
+    margin-top : 60px;
+    @include media("<wide"){
+        padding-left : 10%;
+        padding-right : 10%;
+    }
+    @include media("<middle"){
+        padding-left : 3%;
+        padding-right : 3%;
+    }
+    .title{
+        margin : 0 auto;
+        font-weight: 600;
+        font-size : 2rem;
+        font-family: 'ubuntu',sans-serif;
+        .title-bottom{
+            margin : 0 auto;
+            width : 40%;
+            margin-top : 20px;
+            // border-bottom : 3px solid $oc-violet-6;
+            border-bottom : 4px solid $oc-green-6
+        }
+    }
+    .lu-box{
+        margin-top : 2.5rem;
+        display :flex;
+        flex-direction: row;
+        min-height : 20rem;
+        width : 100%;
+        border : 1px solid $oc-gray-4;
+        @include media("<medium"){
+            flex-direction: column;
+        }
+        .lu-photo{
+            flex:0.5;
+            overflow : hidden;
+            cursor : pointer;
+            img{
+                position : relative;
+                opacity: 0.8;
+                transform :scale3d(1.1, 1.1, 1);
+                -ms-transform: scale3d(1.1, 1.1, 1);
+                -webkit-transform: scale3d(1.1, 1.1, 1);
+                -o-transform: scale3d(1.1, 1.1, 1);
+                -moz-transform: scale3d(1.1, 1.1, 1);
+                border-radius : 7px;
+                transition: 1.3s;
+                width : 100%;
+                &:hover{
+                    overflow : hidden;
+                    opacity: 1;
+                    transform : scale3d(1,1,1);
+                    -ms-transform: scale3d(1,1,1);
+                    -webkit-transform: scale3d(1,1,1);
+                    -o-transform: scale3d(1,1,1);
+                    -moz-transform: scale3d(1,1,1);
+                }
+            }
+        }
+        .lu-content-box{
+            display : flex;
+            flex-direction: column;
+            flex : 0.5;
+            .lu-tags{
+                font-size : 1.1rem;
+                font-weight: 500;
+                color : $oc-green-6;
+                padding-left : 2rem;
+                .tag{
+                    border : 1px solid $oc-green-6;
+                    color : $oc-green-6;
+                    padding : 0.2rem 0.5rem 0.2rem 0.5rem;
+                    border-radius : 15px;
+                    text-decoration: none;
+                    &:hover{
+                        border : 2px solid $oc-green-7;
+                    }
+                }
+                .tag + .tag{
+                    margin-left : 0.35rem;
+                }
+            }
+            .lu-title{
+                font-size : 1.2rem;
+                font-weight : 600;
+                padding-left : 2rem;
+            }
+            .lu-content{
+                color : $oc-gray-6;
+                font-weight : 400;
+                font-size : 1.1rem;
+                padding-left : 2rem;
+                padding-right : 1.5rem;
+            }
+            .lu-btn-box{
+                display :flex;
+                justify-content: center;
+                align-items: center;
+                flex : 1;
+                align-items: flex-end;
+                .lu-btn{
+                    width : 90%;
+                    margin-bottom : 0.8rem;
+                    padding-top : 0.5rem;
+                    padding-bottom : 0.5rem;
+                    text-align : center;
+                    font-size : 1.2rem;
+                    border : 1px solid $oc-gray-3;
+                    border-radius: 5px;
+                    cursor : pointer;
+                    .btn{
+                        color : $oc-gray-5;
+                        text-decoration: none;
+                    }
+                }
+                .lu-btn:hover{
+                    transition: 0.3s;
+                    background : $oc-green-6;
+                    .btn{
+                        color : white;
+                    }
+                }
+            }
+        }
+        div+div{
+            margin-top : 0.8rem;
+        }
+
+    }
+    @include media("<medium"){
+        width : 100%;
+    }
+}

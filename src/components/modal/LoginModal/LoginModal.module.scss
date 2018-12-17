@@ -1,0 +1,56 @@
+@import '~styles/utils';
+
+.login-modal{
+    padding : 0.5rem 2rem 1.5rem 2rem;
+     .cancel-btn{
+        display : flex;
+        justify-content: flex-end;
+        font-size : 2rem;
+        cursor : pointer;
+        color : $oc-gray-6;
+        &:hover{
+            color : $oc-gray-9;
+        }
+     }
+     .title{
+        font-size : 1.8rem;
+        font-weight : 700;
+        //color : $oc-cyan-6;
+        color : $oc-gray-7;
+        text-transform: uppercase;
+    }
+    
+    .description{
+        font-size : 1.3rem;
+        margin-top : 8px;
+    }
+    input{
+        display : block;
+        margin-top : 8px;
+        border : none;
+        outline : none;
+        border-bottom : 1px solid $oc-gray-6;
+        font-size : 1.4rem;
+        &:focus{
+            border-bottom : 1px solid $oc-gray-9;
+        }
+    }
+    .warning-msg{
+        color : $oc-red-7;
+        font-size : 1rem;
+        text-align : center;
+        padding-top : 0.5rem;
+    }
+    .btn{
+        padding : .3rem 0 .3rem 0;
+        margin-top : 0.5rem;
+        text-align : center;
+        background : $oc-cyan-5;
+        color : white;
+        font-size : 1.4rem;
+        cursor : pointer;
+        &:hover{
+            background : $oc-cyan-6;
+        }
+    }
+}

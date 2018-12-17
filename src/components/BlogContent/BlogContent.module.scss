@@ -1,0 +1,18 @@
+@import '~styles/utils';
+
+.blog-content{
+    // background : $oc-green-3;
+    margin : 0 auto;
+    width : 50%;
+    height : auto;
+    padding-top : 3rem;
+    @include media("<wide"){
+        width : 80%;
+    }
+    @include media("<=large"){
+        width : 80%;
+    }
+    @include media("<=medium"){
+        width : 90%;
+    }
+}

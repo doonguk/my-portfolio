@@ -1,0 +1,70 @@
+@import '~styles/utils';
+
+@keyframes fadeIn{
+    0%{ opacity : 0;}
+    100%{ opacity: 1;}
+}
+@keyframes fadeOut{
+    0%{ opacity : 1;}
+    100%{ opacity: 0; }
+}
+@-ms-keyframes fadeIn{
+    0%{ opacity : 0;}
+    100%{ opacity: 1;}
+}
+@-ms-keyframes fadeOut{
+    0%{ opacity : 1;}
+    100%{ opacity: 0; }
+}
+
+.blog-template{
+    &.enter{
+        transform: translateX(-300px);
+        transition: 0.3s;
+        -ms-transform: translateX(-300px);
+        -webkit-transform: translateX(-300px);
+        -o-transform : translateX(-300px);
+    }
+    @include media("<355px"){
+        &.enter{
+            transform: translateX(-270px);
+            -ms-transform: translateX(-270px);
+            -webkit-transform: translateX(-270px);
+            -o-transform : translateX(-270px);
+        }
+    }
+    .top-btn{
+        position : fixed;
+        top : calc(100% - 4rem);
+        left : 80%;
+        background : $oc-blue-5;
+        border-radius: 50%;
+        color : white;
+        font-size : 1.1rem;
+        width : 45px;
+        height : 45px;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration : none;
+        @include media("<wide"){
+            display : none;
+        }      
+    }
+}
+.menubar{
+    position: absolute;
+    overflow: hidden;
+    left: calc(100% - 300px);
+    top : 0;
+    transition: 0.3s;
+    @include media("<355px"){
+        left : calc(100% - 270px);
+    }
+    &.enter{
+        animation : fadeIn 0.3s ease-in;
+        -ms-animation : fadeIn 0.3s ease-in;
+        -o-animation: fadeIn 0.3s ease-in;
+        -webkit-animation: fadeIn 0.3s ease-in;
+    }
+}

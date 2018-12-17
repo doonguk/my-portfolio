@@ -1,0 +1,64 @@
+@import '~styles/utils';
+
+.template{
+    .blog-header{
+        display : flex;
+        width : 100%;
+        align-items: center;
+        padding : 1rem;
+        position: relative;
+        top : 0;
+        height : 90px;
+        .header-title{
+            margin : 0 auto;
+            margin-left : 25%;
+            font-family : 'ubuntu', 'Noto Sans Kr';
+            font-size : 2rem;
+            font-weight : 400;
+            @include media("<wide"){
+                font-size : 2rem;
+                margin-left : 10%;
+            }
+            @include media("<large"){
+                font-size : 2rem;
+                margin-left : 5%;
+            }
+            @include media("<=medium"){
+                font-size : 1.5rem;
+                margin-left : 5%;
+            }
+            @include media("<500px"){
+                font-size : 1.4rem;
+                margin-left : 5%;
+            }
+            @include media("<340px"){
+                font-size : 1.3rem;
+                margin-left : 4%;
+            }
+            @include media('<=small'){
+                font-size : 1.2rem;
+                margin-left : 5%;
+            }
+        }
+        .write-btn{
+            color : unset;
+            margin-right : 1.5rem;
+            font-size : 1.5rem;
+            padding : 0.2rem 0.7rem 0.2rem 0.7rem;
+            text-decoration: none;
+            &:hover{
+                font-weight : 600;
+            }
+        }
+        .search-btn{
+            margin-right : 1rem;
+        }
+        .menu{
+            margin-right : 1rem;
+        }
+        img{
+            cursor : pointer;
+        }
+        @include material-shadow(2, 0.3);
+    }
+} 

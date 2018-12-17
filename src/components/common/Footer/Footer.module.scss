@@ -1,0 +1,39 @@
+@import '~styles/utils';
+.footer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    .footer-content{
+        width : 100%;
+        // background : $oc-gray-9;
+        background : black;
+        height : 10rem;
+        color : white;
+        display : flex;
+        justify-content: center;
+         align-items: center;
+         flex-direction: column;
+        .all-right-reserved{
+            font-size : 1.1rem;
+        }
+        .logos{
+            display :flex;
+            flex-direction: row;
+            margin-top : 20px;
+            img{
+                cursor : pointer;
+            }
+            div+div{
+                margin-left: 1.7rem;
+            }
+        }
+        .login{
+            font-size : 1.1rem;
+            margin-top : 10px;
+            cursor : pointer;
+            &:hover{
+                font-weight : 600;
+            }
+        }
+    }
+}

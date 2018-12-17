@@ -1,0 +1,41 @@
+@import '~styles/utils';
+
+.editor-header{
+    height : 4rem;
+    display : flex;
+    align-items : center;
+    padding-left : 1rem;
+    padding-right : 1rem;
+    background : $oc-blue-6;
+    .back{
+        font-size : 1.2rem;
+        border : 2px solid $oc-gray-1;
+        color : $oc-gray-1;
+        padding : 0.2rem 0.7rem 0.2rem 0.7rem;
+        // border-radius: 7px;
+        text-decoration: none;
+        cursor : pointer;
+        &:hover{
+            background : $oc-blue-3;
+            color : white;
+            transition: 0.2s;
+            border : none;
+        }
+    }
+    .submit {
+        margin-left : auto;
+        font-size : 1.2rem;
+        border : 2px solid $oc-gray-1;
+        color : $oc-gray-1;
+        padding : 0.2rem 0.7rem 0.2rem 0.7rem;
+        // border-radius: 7px;
+        text-decoration: none;
+        cursor : pointer;
+        &:hover{
+            background : $oc-blue-3;
+            color : white;
+            transition: 0.2s;
+            border : none;
+        }
+    }
+}

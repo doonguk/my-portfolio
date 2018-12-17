@@ -1,0 +1,46 @@
+@import '~styles/utils';
+
+
+.write-modal{
+    padding : 2rem 2rem 1.5rem 2rem;
+    .title{
+        font-size : 1.8rem;
+        font-weight : 700;
+        // color : $oc-cyan-6;
+        color : $oc-gray-7;
+        text-transform: uppercase;
+    }
+    .category{
+        margin-top : 20px;
+        display : flex;
+        div{
+            font-size : 1.3rem;
+            font-weight : 500;
+        }
+        select{
+            margin-left : 20px;
+            font-size : 1.4rem;
+            border-radius : 40px;
+            padding-left : 20px;
+            outline : none;
+        }
+    }
+    .btns{
+        margin-top : 20px;
+        border-top : 1px solid $oc-gray-5;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        padding-top : 1rem;
+        font-size : 1.2rem;
+        div + div { 
+            margin-left : 3rem;
+        }
+        .write-btn, .cancel-btn{
+            cursor : pointer;
+            &:hover{
+                font-weight : 600;
+            }
+        }
+    }
+}

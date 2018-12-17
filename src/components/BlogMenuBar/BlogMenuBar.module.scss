@@ -1,0 +1,86 @@
+@import '~styles/utils';
+
+@mixin menu-bar-base(){
+    color : white;
+    padding-left : 35px;
+    font-size : 1.1rem;
+    flex : 1;
+    text-decoration: none;
+    padding-top : 8px;
+    padding-bottom : 8px;
+}
+.blog-menubar{
+    width : 300px;
+    background : $oc-blue-5;
+    //min-height : 99vh;
+    height : 100%;
+    overflow: hidden;
+    padding-bottom : 60px;
+    @include media("<355px"){
+       width : 270px;
+    }
+    .profile{
+        width : 100%;
+        display : flex;
+        flex-direction: column;
+        color : $oc-gray-3;
+        font-family: 'ubuntu';
+        
+        .profile-photo{
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                margin-top : 50px;
+                margin-bottom : 20px;
+                border-radius: 50%;
+                @include media("<355px"){
+            
+                }
+            }
+        }
+        .name{
+            padding-left:35px;
+        }
+        .sns{
+            display : flex;
+            flex-direction: row;
+            margin-top : 5px;
+            padding-left:35px;
+            img{
+                margin-top : 0;
+                width : 1.2rem;
+                height : 1.2rem;
+            }
+        }
+        .description{
+            font-size: 0.8rem;
+            padding-left : 35px;
+            margin-bottom : 40px;
+        }
+    }
+    .menu{
+        display : flex;
+        width : 100%;
+        border-top : 1px solid $oc-gray-5;
+        .home{
+            @include menu-bar-base;
+            &:hover{
+                background: $oc-gray-6;
+            }
+        }
+    }
+    .sub-menu{
+        display : flex;
+        width : 100%;
+        border-top : 1px solid $oc-gray-5;
+        &:hover{
+            background: $oc-gray-6;
+        }
+        .home{
+            margin-left : 20px;       
+            @include menu-bar-base;
+          
+        }
+    }
+}
